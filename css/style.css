@@ -1,0 +1,85 @@
+@import url(./reset.css);
+/* ==============================Universal Selector */
+* {
+    background-color: #b1b5be;
+}
+
+/* ==========================================
+GRID CONTAINER
+========================================== */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2fr 5);
+    color: #ddd9da;
+    text-align: center;
+    padding: 30px;
+}
+
+/* ==============================Header */
+
+header {
+    border-radius: 8px;
+    background-color: #9f2064;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* ===========================First Aside (left when expanded) */
+
+.first-aside {
+    background-color: #126495;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+/* ==============================Article */
+
+.cards{
+    background-color: #26b77e;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* ==============================Main */
+
+.card{
+    background-color: #e5195b;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* ===========================Second Aside (right when expanded) */
+
+.second-aside {
+    background-color: #26a4b6;
+    height: 1fr;
+    margin: 10px;
+    padding: 20px;
+
+
+}
+
+/* ===========================Footer */
+
+footer {
+    background-color: #df6725;
+    margin: 10px;
+    padding: 20px;
+
+
+}
+
+/* ===========================Styling */
+
+header,
+aside,
+main,
+article,
+footer {
+    border-radius: 8px;
+    font-size: 1.5rem;
+
+}
