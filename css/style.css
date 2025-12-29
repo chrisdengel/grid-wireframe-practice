@@ -1,85 +1,88 @@
-@import url(./reset.css);
-/* ==============================Universal Selector */
 * {
-    background-color: #b1b5be;
-}
-
-/* ==========================================
-GRID CONTAINER
-========================================== */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2fr 5);
-    color: #ddd9da;
+    background-color: #ddd9da;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    padding: 30px;
+    border-radius: 5px;
+    color: #ddd9da;
+    justify-content: center;
 }
 
-/* ==============================Header */
+header, footer {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
 
 header {
-    border-radius: 8px;
     background-color: #9f2064;
-    padding: 20px;
-    margin: 10px;
 }
-
-/* ===========================First Aside (left when expanded) */
-
-.first-aside {
-    background-color: #126495;
-    padding: 20px;
-    margin: 10px;
-
-}
-
-/* ==============================Article */
-
-.cards{
-    background-color: #26b77e;
-    padding: 20px;
-    margin: 10px;
-}
-
-/* ==============================Main */
-
-.card{
-    background-color: #e5195b;
-    padding: 10px;
-    margin: 10px;
-}
-
-/* ===========================Second Aside (right when expanded) */
-
-.second-aside {
-    background-color: #26a4b6;
-    height: 1fr;
-    margin: 10px;
-    padding: 20px;
-
-
-}
-
-/* ===========================Footer */
 
 footer {
     background-color: #df6725;
-    margin: 10px;
-    padding: 20px;
+}
 
+.middlebox {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card4 { background-color: #126495; min-height: 100px; }
+.card5 { background-color: #26a4b6; min-height: 100px; }
+
+/* ----------------------------------green background part */
+.green-article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    background-color: #26b77e;
+    padding: 10px;
+    height: 50vh;
+    align-items: stretch;
+    align-items:last baseline;
 
 }
 
-/* ===========================Styling */
+.article-label {
+    grid-column: 1 / -1;
+    align-self: start;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+.card1, .card2, .card3 {
+    background-color: #e5195b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    min-height: 30px;
+}
 
-header,
-aside,
-main,
-article,
-footer {
-    border-radius: 8px;
-    font-size: 1.5rem;
+@media (max-width: 700px) {
+    .middlebox {
+        grid-template-columns: 1fr;
+    }
 
+    .card4,
+    .green-article,
+    .card5 {
+        grid-column: 1fr;
+    }
+
+    .green-article {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        height: 150px;
+    }
+
+    .article-label {
+        display: none;
+    }
+  
 }
